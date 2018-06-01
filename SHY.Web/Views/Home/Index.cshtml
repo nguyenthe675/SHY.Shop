@@ -12,114 +12,347 @@
         $('.example1').wmuSlider();
     </script>
 }
-<div class="shoes-grid">
-    <div class="wrap-in">
-        <div class="wmuSlider example1 slide-grid">
-            <div class="wmuSliderWrapper">
-                @foreach (var slide in Model.Slides)
-                {
-                    <article style="position: absolute; width: 100%; opacity: 0;">
-                        <div class="banner-matter">
-                            <div class="col-md-5 banner-bag">
-                                <img class="img-responsive " src="@slide.Image" alt="@slide.Name" />
-                            </div>
-                            <div class="col-md-7 banner-off">
-                                @Html.Raw(slide.Content)
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                    </article>
 
-                }
-            </div>
-            <ul class="wmuSliderPagination">
-                @for (int i = 0; i < Model.Slides.Count(); i++)
-                {
-                    <li><a href="#" class="">i</a></li>
-                }
-            </ul>
+<div class="content-top">
+    <div class="col-md-6 col-md">
+        <div class="col-1">
+            <a href="single.html" class="b-link-stroke b-animate-go  thickbox">
+                <img src="~/Assets/client/themes/images/pi.jpg" class="img-responsive" alt="" />
+                <div class="b-wrapper1 long-img">
+                    <p class="b-animate b-from-right    b-delay03 ">Lorem ipsum</p>
+                    <label class="b-animate b-from-right    b-delay03 "></label>
+                    <h3 class="b-animate b-from-left    b-delay03 ">Trendy</h3>
+                </div>
+            </a>
+
+            <!---<a href="single.html"><img src="images/pi.jpg" class="img-responsive" alt=""></a>-->
+        </div>
+        <div class="col-2">
+            <span>Hot Deal</span>
+            <h2>
+                <a href="single.html">Luxurious &amp; Trendy</a>
+            </h2>
+            <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
+                from 45 BC, making it over 2000 years
+            </p>
+            <a href="single.html" class="buy-now">Buy Now</a>
         </div>
     </div>
-    <div class="products">
-        <h5 class="latest-product">Sản phẩm mới nhất</h5>
-        <a class="view-all" href="san-pham.html">Xem tất cả<span> </span></a>
+    <div class="col-md-6 col-md1">
+        <div class="col-3">
+            <a href="single.html">
+                <img src="~/Assets/client/themes/images/pi1.jpg" class="img-responsive" alt="">
+                <div class="col-pic">
+                    <p>Lorem Ipsum</p>
+                    <label></label>
+                    <h5>For Men</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col-3">
+            <a href="single.html">
+                <img src="~/Assets/client/themes/images/pi2.jpg" class="img-responsive" alt="">
+                <div class="col-pic">
+                    <p>Lorem Ipsum</p>
+                    <label></label>
+                    <h5>For Kids</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col-3">
+            <a href="single.html">
+                <img src="~/Assets/client/themes/images/pi3.jpg" class="img-responsive" alt="">
+                <div class="col-pic">
+                    <p>Lorem Ipsum</p>
+                    <label></label>
+                    <h5>For Women</h5>
+                </div>
+            </a>
+        </div>
     </div>
-    <div class="product-left">
+    <div class="clearfix"></div>
+</div>
+
+<!--products-->
+<div class="content-mid">
+    <h3>New products</h3>
+    <label class="line"></label>
+    <div class="mid-popular">
+
         @foreach (var product in Model.LastestProducts)
         {
             var url = "/" + product.Alias + ".p-" + product.ID + ".html";
-            <div class="col-md-4 chain-grid grid-top-chain">
-                <a href="@url"><img class="img-responsive chain" src="@product.Image" /></a>
-                <span class="star"> </span>
-                <div class="grid-chain-bottom">
-                    <h6><a href="@url">@product.Name</a></h6>
-                    <div class="star-price">
-                        <div class="dolor-grid">
-                            @if (product.PromotionPrice.HasValue)
-                            {
-                                <span class="actual">@product.PromotionPrice.Value.ToString("N0")</span>
-                            }
-                            <span class="reducedfrom">@product.Price.ToString("N0")</span>
-                            <span class="rating">
-                                <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
-                                <label for="rating-input-1-5" class="rating-star1"> </label>
-                                <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
-                                <label for="rating-input-1-4" class="rating-star1"> </label>
-                                <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
-                                <label for="rating-input-1-3" class="rating-star"> </label>
-                                <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
-                                <label for="rating-input-1-2" class="rating-star"> </label>
-                                <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
-                                <label for="rating-input-1-1" class="rating-star"> </label>
-                            </span>
+            <div class="col-md-3 item-grid simpleCart_shelfItem">
+                <div class=" mid-pop">
+                    <div class="pro-img">
+                        <img src="@product.Image" class="img-responsive" alt="">
+                        <div class="zoom-icon ">
+                            <a class="picture" href="@url" rel="title" class="picture b-link-stripe b-animate-go  thickbox">
+                                <i class="glyphicon glyphicon-search icon "></i>
+                            </a>
+                            <a href="@url">
+                                <i class="glyphicon glyphicon-menu-right icon"></i>
+                            </a>
                         </div>
-                        <a class="now-get get-cart btnAddToCart" href="#" data-id="@product.ID">Mua hàng</a>
-                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="mid-1">
+                        <div class="women">
+                            <div class="women-top">
+                                <span>@product.Name</span>
+                                <h6>
+                                    <a href="@url">@product.Description</a>
+                                </h6>
+                            </div>
+                            <div class="img item_add">
+                                <a href="#">
+                                    <img src="~/Assets/client/themes/images/ca.png" alt="">
+                                </a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="mid-2">
+                            <p>
+                                @if (product.PromotionPrice.HasValue)
+                                {
+                                    <label>@product.Price.ToString("N0")</label>
+                                    <em class="item_price">
+                                        @product.PromotionPrice.Value.ToString("N0")
+                                    </em>
+                                }
+                                else
+                                {
+                                    <em class="item_price">
+                                        @product.Price.ToString("N0")
+                                    </em>
+                                }
+                            </p>
+                            <div class="block">
+                                <div class="starbox small ghosting">
+                                    <div class="positioner hover">
+                                        <div class="stars">
+                                            <div class="ghost" style="width: 42.5px;"></div>
+                                            <div class="colorbar" style="width: 68px;"></div>
+                                            <div class="star_holder">
+                                                <div class="star star-0"></div>
+                                                <div class="star star-1"></div>
+                                                <div class="star star-2"></div>
+                                                <div class="star star-3"></div>
+                                                <div class="star star-4"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         }
-        <div class="clearfix"> </div>
+
+
+        <div class="clearfix"></div>
     </div>
-    <div class="products">
-        <h5 class="latest-product">Sản phẩm bán chạy</h5>
-        <a class="view-all" href="san-pham-ban-chay.html">Xem tất cả<span> </span></a>
-    </div>
-    <div class="product-left">
+
+</div>
+<div class="content-mid">
+    <h3>Hot Items</h3>
+    <label class="line"></label>
+    <div class="mid-popular">
+
         @foreach (var product in Model.TopSaleProducts)
         {
             var url = "/" + product.Alias + ".p-" + product.ID + ".html";
-            <div class="col-md-4 chain-grid grid-top-chain">
-                <a href="@url"><img class="img-responsive chain" src="@product.Image" /></a>
-                <span class="star"> </span>
-                <div class="grid-chain-bottom">
-                    <h6><a href="@url">@product.Name</a></h6>
-                    <div class="star-price">
-                        <div class="dolor-grid">
-                            @if (product.PromotionPrice.HasValue)
-                            {
-                                <span class="actual">@product.PromotionPrice.Value.ToString("N0")</span>
-                            }
-                            <span class="reducedfrom">@product.Price.ToString("N0")</span>
-                            <span class="rating">
-                                <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
-                                <label for="rating-input-1-5" class="rating-star1"> </label>
-                                <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
-                                <label for="rating-input-1-4" class="rating-star1"> </label>
-                                <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
-                                <label for="rating-input-1-3" class="rating-star"> </label>
-                                <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
-                                <label for="rating-input-1-2" class="rating-star"> </label>
-                                <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
-                                <label for="rating-input-1-1" class="rating-star"> </label>
-                            </span>
+            <div class="col-md-3 item-grid simpleCart_shelfItem">
+                <div class=" mid-pop">
+                    <div class="pro-img">
+                        <img src="@product.Image" class="img-responsive" alt="">
+                        <div class="zoom-icon ">
+                            <a class="picture" href="@url" rel="title" class="picture b-link-stripe b-animate-go  thickbox">
+                                <i class="glyphicon glyphicon-search icon "></i>
+                            </a>
+                            <a href="@url">
+                                <i class="glyphicon glyphicon-menu-right icon"></i>
+                            </a>
                         </div>
-                        <a class="now-get get-cart btnAddToCart" href="#" data-id="@product.ID">Mua hàng</a>
-                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="mid-1">
+                        <div class="women">
+                            <div class="women-top">
+                                <span>@product.Name</span>
+                                <h6>
+                                    <a href="@url">@product.Description</a>
+                                </h6>
+                            </div>
+                            <div class="img item_add">
+                                <a href="#">
+                                    <img src="~/Assets/client/themes/images/ca.png" alt="">
+                                </a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="mid-2">
+                            <p>
+                                @if (product.PromotionPrice.HasValue)
+                                {
+                                    <label>@product.Price.ToString("N0")</label>
+                                    <em class="item_price">
+                                        @product.PromotionPrice.Value.ToString("N0")
+                                    </em>
+                                }
+                                else
+                                {
+                                    <em class="item_price">
+                                        @product.Price.ToString("N0")
+                                    </em>
+                                }
+                            </p>
+                            <div class="block">
+                                <div class="starbox small ghosting"> </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         }
-        <div class="clearfix"> </div>
+
+
+        <div class="clearfix"></div>
     </div>
+
+</div>
+<!--//products-->
+<!--brand-->
+<div class="brand">
+    <div class="col-md-3 brand-grid">
+        <img src="~/Assets/client/themes/images/ic.png" class="img-responsive" alt="">
+    </div>
+    <div class="col-md-3 brand-grid">
+        <img src="~/Assets/client/themes/images/ic1.png" class="img-responsive" alt="">
+    </div>
+    <div class="col-md-3 brand-grid">
+        <img src="~/Assets/client/themes/images/ic2.png" class="img-responsive" alt="">
+    </div>
+    <div class="col-md-3 brand-grid">
+        <img src="~/Assets/client/themes/images/ic3.png" class="img-responsive" alt="">
+    </div>
+    <div class="clearfix"></div>
+</div>
+<!--//brand-->
+<div class="shoes-grid">
+    @*<div class="wrap-in">
+            <div class="wmuSlider example1 slide-grid">
+                <div class="wmuSliderWrapper">
+                    @foreach (var slide in Model.Slides)
+                    {
+                        <article style="position: absolute; width: 100%; opacity: 0;">
+                            <div class="banner-matter">
+                                <div class="col-md-5 banner-bag">
+                                    <img class="img-responsive " src="@slide.Image" alt="@slide.Name" />
+                                </div>
+                                <div class="col-md-7 banner-off">
+                                    @Html.Raw(slide.Content)
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </article>
+
+                    }
+                </div>
+                <ul class="wmuSliderPagination">
+                    @for (int i = 0; i < Model.Slides.Count(); i++)
+                    {
+                        <li><a href="#" class="">i</a></li>
+                    }
+                </ul>
+            </div>
+        </div>*@
+    @*<div class="products">
+            <h5 class="latest-product">Sản phẩm mới nhất</h5>
+            <a class="view-all" href="san-pham.html">Xem tất cả<span> </span></a>
+        </div>*@
+    @*<div class="product-left">
+            @foreach (var product in Model.LastestProducts)
+            {
+                var url = "/" + product.Alias + ".p-" + product.ID + ".html";
+                <div class="col-md-4 chain-grid grid-top-chain">
+                    <a href="@url"><img class="img-responsive chain" src="@product.Image" /></a>
+                    <span class="star"> </span>
+                    <div class="grid-chain-bottom">
+                        <h6><a href="@url">@product.Name</a></h6>
+                        <div class="star-price">
+                            <div class="dolor-grid">
+                                @if (product.PromotionPrice.HasValue)
+                                {
+                                    <span class="actual">@product.PromotionPrice.Value.ToString("N0")</span>
+                                }
+                                <span class="reducedfrom">@product.Price.ToString("N0")</span>
+                                <span class="rating">
+                                    <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+                                    <label for="rating-input-1-5" class="rating-star1"> </label>
+                                    <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+                                    <label for="rating-input-1-4" class="rating-star1"> </label>
+                                    <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+                                    <label for="rating-input-1-3" class="rating-star"> </label>
+                                    <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+                                    <label for="rating-input-1-2" class="rating-star"> </label>
+                                    <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+                                    <label for="rating-input-1-1" class="rating-star"> </label>
+                                </span>
+                            </div>
+                            <a class="now-get get-cart btnAddToCart" href="#" data-id="@product.ID">Mua hàng</a>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            <div class="clearfix"> </div>
+        </div>*@
+    @*<div class="products">
+            <h5 class="latest-product">Sản phẩm bán chạy</h5>
+            <a class="view-all" href="san-pham-ban-chay.html">Xem tất cả<span> </span></a>
+        </div>*@
+    @*<div class="product-left">
+            @foreach (var product in Model.TopSaleProducts)
+            {
+                var url = "/" + product.Alias + ".p-" + product.ID + ".html";
+                <div class="col-md-4 chain-grid grid-top-chain">
+                    <a href="@url"><img class="img-responsive chain" src="@product.Image" /></a>
+                    <span class="star"> </span>
+                    <div class="grid-chain-bottom">
+                        <h6><a href="@url">@product.Name</a></h6>
+                        <div class="star-price">
+                            <div class="dolor-grid">
+                                @if (product.PromotionPrice.HasValue)
+                                {
+                                    <span class="actual">@product.PromotionPrice.Value.ToString("N0")</span>
+                                }
+                                <span class="reducedfrom">@product.Price.ToString("N0")</span>
+                                <span class="rating">
+                                    <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1">
+                                    <label for="rating-input-1-5" class="rating-star1"> </label>
+                                    <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1">
+                                    <label for="rating-input-1-4" class="rating-star1"> </label>
+                                    <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1">
+                                    <label for="rating-input-1-3" class="rating-star"> </label>
+                                    <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1">
+                                    <label for="rating-input-1-2" class="rating-star"> </label>
+                                    <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1">
+                                    <label for="rating-input-1-1" class="rating-star"> </label>
+                                </span>
+                            </div>
+                            <a class="now-get get-cart btnAddToCart" href="#" data-id="@product.ID">Mua hàng</a>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            <div class="clearfix"> </div>
+        </div>*@
 </div>

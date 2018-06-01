@@ -5142,6 +5142,7 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_Banner.cshtml" />
+    <Content Include="Views\Shared\_ListLayouts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\components\orders\" />
@@ -5616,7 +5617,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55429</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/SHY.Web</IISUrl>
+          <IISUrl>http://localhost:8080/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -29,6 +29,7 @@ namespace SHY.Web
                 .Include("~/Assets/client/font-awesome-4.6.3/css/font-awesome.css", new CssRewriteUrlTransform())
                 .Include("~/Assets/client/themes/css/chocolat.css", new CssRewriteUrlTransform())
                 .Include("~/Assets/client/themes/css/popuo-box.css", new CssRewriteUrlTransform())
+                .Include("~/Assets/client/themes/css/jstarbox.css", new CssRewriteUrlTransform())
                 .Include("~/Assets/client/themes/css/style.css", new CssRewriteUrlTransform())
                 .Include("~/Assets/client/themes/css/style4.css", new CssRewriteUrlTransform())
                 );
