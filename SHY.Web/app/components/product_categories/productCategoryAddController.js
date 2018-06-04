@@ -59,4 +59,4 @@
         loadParentCategory();
     }
 
-})(angular.module('tedushop.product_categories'));
+})(angular.module('shyApp.product_categories'));

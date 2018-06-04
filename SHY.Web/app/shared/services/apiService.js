@@ -1,4 +1,4 @@
-﻿/// <reference path="/Assets/admin/libs/angular/angular.js" />
+﻿/// <reference path="../assets/admin/libs/angular/angular.js" />
 
 (function (app) {
     app.factory('apiService', apiService);
@@ -66,4 +66,4 @@
             });
         }
     }
-})(angular.module('tedushop.common'));
+})(angular.module('shyApp.common'));

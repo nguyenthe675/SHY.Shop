@@ -13,7 +13,7 @@ namespace SHY.Web.App_Start
 {
     public class ApplicationUserStore : UserStore<ApplicationUser>
     {
-        public ApplicationUserStore(TeduShopDbContext context)
+        public ApplicationUserStore(ShyDbContext context)
             : base(context)
         {
         }
@@ -28,7 +28,7 @@ namespace SHY.Web.App_Start
 
         public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context)
         {
-            var manager = new ApplicationUserManager(new UserStore<ApplicationUser>(context.Get<TeduShopDbContext>()));
+            var manager = new ApplicationUserManager(new UserStore<ApplicationUser>(context.Get<ShyDbContext>()));
             // Configure validation logic for usernames
             manager.UserValidator = new UserValidator<ApplicationUser>(manager)
             {

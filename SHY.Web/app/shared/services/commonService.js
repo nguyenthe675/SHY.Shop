@@ -1,4 +1,4 @@
-﻿/// <reference path="/Assets/admin/libs/angular/angular.js" />
+﻿/// <reference path="../../../assets/admin/libs/angular/angular.js" />
 
 (function (app) {
     app.factory('commonService', commonService);
@@ -73,11 +73,11 @@
                 }
             }
 
-            for (var i = 0; i < rootIds.length; i++) {
-                tree.push(treeObjs[rootIds[i]]);
+            for (var x = 0; x < rootIds.length; x++) {
+                tree.push(treeObjs[rootIds[x]]);
             };
 
             return tree;
         }
     }
-})(angular.module('tedushop.common'));
+})(angular.module('shyApp.common'));

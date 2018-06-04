@@ -90,4 +90,4 @@
         loadProductCategory();
     }
 
-})(angular.module('tedushop.products'));
+})(angular.module('shyApp.products'));

@@ -9,9 +9,9 @@ using SHY.Model.Models;
 
 namespace SHY.Data
 {
-    public class TeduShopDbContext : IdentityDbContext<ApplicationUser>
+    public class ShyDbContext : IdentityDbContext<ApplicationUser>
     {
-        public TeduShopDbContext() : base("TeduShopConnection")
+        public ShyDbContext() : base("ShyConnection")
         {
             this.Configuration.LazyLoadingEnabled = false;
         }
@@ -47,9 +47,9 @@ namespace SHY.Data
         public DbSet<ApplicationRoleGroup> ApplicationRoleGroups { set; get; }
         public DbSet<ApplicationUserGroup> ApplicationUserGroups { set; get; }
 
-        public static TeduShopDbContext Create()
+        public static ShyDbContext Create()
         {
-            return new TeduShopDbContext();
+            return new ShyDbContext();
         }
 
         protected override void OnModelCreating(DbModelBuilder builder)

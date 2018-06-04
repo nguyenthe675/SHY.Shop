@@ -26,7 +26,7 @@ namespace SHY.Web.App_Start
         public void ConfigureAuth(IAppBuilder app)
         {
             // Configure the db context, user manager and signin manager to use a single instance per request
-            app.CreatePerOwinContext(TeduShopDbContext.Create);
+            app.CreatePerOwinContext(ShyDbContext.Create);
 
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
             app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
@@ -134,7 +134,7 @@ namespace SHY.Web.App_Start
 
         private static UserManager<ApplicationUser> CreateManager(IdentityFactoryOptions<UserManager<ApplicationUser>> options, IOwinContext context)
         {
-            var userStore = new UserStore<ApplicationUser>(context.Get<TeduShopDbContext>());
+            var userStore = new UserStore<ApplicationUser>(context.Get<ShyDbContext>());
             var owinManager = new UserManager<ApplicationUser>(userStore);
             return owinManager;
         }

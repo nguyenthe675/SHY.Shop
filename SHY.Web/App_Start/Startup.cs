@@ -40,7 +40,7 @@ namespace SHY.Web.App_Start
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerRequest();
             builder.RegisterType<DbFactory>().As<IDbFactory>().InstancePerRequest();
 
-            builder.RegisterType<TeduShopDbContext>().AsSelf().InstancePerRequest();
+            builder.RegisterType<ShyDbContext>().AsSelf().InstancePerRequest();
 
             //Asp.net Identity
             builder.RegisterType<ApplicationUserStore>().As<IUserStore<ApplicationUser>>().InstancePerRequest();

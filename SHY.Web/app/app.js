@@ -1,14 +1,14 @@
 ﻿/// <reference path="../assets/admin/libs/angular/angular.js" />
 
 (function () {
-    angular.module('tedushop',
-        ['tedushop.products',
-         'tedushop.application_groups',
-         'tedushop.product_categories',
-         'tedushop.application_roles',
-         'tedushop.application_users',
-           'tedushop.statistics',
-         'tedushop.common'])
+    angular.module('shyApp',
+        ['shyApp.products',
+         'shyApp.application_groups',
+         'shyApp.product_categories',
+         'shyApp.application_roles',
+         'shyApp.application_users',
+           'shyApp.statistics',
+         'shyApp.common'])
         .config(config)
         .config(configAuthentication);
 

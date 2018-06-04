@@ -12,14 +12,14 @@
     using System.Diagnostics;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<SHY.Data.TeduShopDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<SHY.Data.ShyDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(SHY.Data.TeduShopDbContext context)
+        protected override void Seed(SHY.Data.ShyDbContext context)
         {
             CreateProductCategorySample(context);
             CreateSlide(context);
@@ -32,14 +32,14 @@
             CreateUser(context);
 
         }
-        private void CreateConfigTitle(TeduShopDbContext context)
+        private void CreateConfigTitle(ShyDbContext context)
         {
             if (!context.SystemConfigs.Any(x => x.Code == "HomeTitle"))
             {
                 context.SystemConfigs.Add(new SystemConfig()
                 {
                     Code = "HomeTitle",
-                    ValueString = "Trang chủ TeduShop",
+                    ValueString = "Của hàng thời trang Shy Store",
 
                 });
             }
@@ -48,7 +48,7 @@
                 context.SystemConfigs.Add(new SystemConfig()
                 {
                     Code = "HomeMetaKeyword",
-                    ValueString = "Trang chủ TeduShop",
+                    ValueString = "Của hàng thời trang Shy Store",
 
                 });
             }
@@ -57,16 +57,16 @@
                 context.SystemConfigs.Add(new SystemConfig()
                 {
                     Code = "HomeMetaDescription",
-                    ValueString = "Trang chủ TeduShop",
+                    ValueString = "Của hàng thời trang Shy Store",
 
                 });
             }
         }
-        private void CreateUser(TeduShopDbContext context)
+        private void CreateUser(ShyDbContext context)
         {
-            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new TeduShopDbContext()));
+            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ShyDbContext()));
 
-            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new TeduShopDbContext()));
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ShyDbContext()));
 
             var user = new ApplicationUser()
             {
@@ -115,7 +115,7 @@
             }
            
         }
-        private void CreateProductCategorySample(SHY.Data.TeduShopDbContext context)
+        private void CreateProductCategorySample(SHY.Data.ShyDbContext context)
         {
             if (context.ProductCategories.Count() == 0)
             {
@@ -131,7 +131,7 @@
             }
 
         }
-        private void CreateFooter(TeduShopDbContext context)
+        private void CreateFooter(ShyDbContext context)
         {
             if (context.Footers.Count(x => x.ID == CommonConstants.DefaultFooterId) == 0)
             {
@@ -145,7 +145,7 @@
             }
         }
 
-        private void CreateSlide(TeduShopDbContext context)
+        private void CreateSlide(ShyDbContext context)
         {
             if (context.Slides.Count() == 0)
             {
@@ -180,7 +180,7 @@
             }
         }
 
-        private void CreatePage(TeduShopDbContext context)
+        private void CreatePage(ShyDbContext context)
         {
             if (context.Pages.Count() == 0)
             {
@@ -212,7 +212,7 @@
             }
         }
 
-        private void CreateContactDetail(TeduShopDbContext context)
+        private void CreateContactDetail(ShyDbContext context)
         {
             if (context.ContactDetails.Count() == 0)
             {
@@ -220,13 +220,13 @@
                 {
                     var contactDetail = new SHY.Model.Models.ContactDetail()
                     {
-                        Name = "Shop thời trang TEDU",
-                        Address = "Ngõ 77 Xuân La",
-                        Email = "tedu@gmail.com",
+                        Name = "Shop thời trang Shy Store",
+                        Address = "164 Khuất Duy Tiến, Thanh Xuân, HN.",
+                        Email = "nguyenthe675@gmail.com",
                         Lat = 21.0633645,
                         Lng= 105.8053274,
-                        Phone = "095423233",
-                        Website = "http://tedu.com.vn",
+                        Phone = "0904652627",
+                        Website = "",
                         Other = "",
                         Status = true
 

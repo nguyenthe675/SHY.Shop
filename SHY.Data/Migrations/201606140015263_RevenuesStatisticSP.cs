@@ -1,4 +1,4 @@
-namespace TeduShop.Data.Migrations
+namespace SHY.Data.Migrations
 {
     using System.Data.Entity.Migrations;
 

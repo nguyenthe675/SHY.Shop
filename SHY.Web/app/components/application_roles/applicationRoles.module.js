@@ -1,7 +1,7 @@
 ﻿/// <reference path="/Assets/admin/libs/angular/angular.js" />
 
 (function () {
-    angular.module('tedushop.application_roles', ['tedushop.common']).config(config);
+    angular.module('shyApp.application_roles', ['shyApp.common']).config(config);
 
     config.$inject = ['$stateProvider', '$urlRouterProvider'];
 

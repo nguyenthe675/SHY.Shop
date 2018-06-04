@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module('tedushop.common',
+    angular.module('shyApp.common',
         ['ui.router',
          'ngBootbox',
          'ngCkeditor',

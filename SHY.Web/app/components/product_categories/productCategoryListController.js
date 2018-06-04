@@ -92,7 +92,7 @@
             }
             $scope.loading = true;
             apiService.get('/api/productcategory/getall', config, function (result) {
-                if (result.data.TotalCount == 0) {
+                if (result.data.TotalCount === 0) {
                     notificationService.displayWarning('Không có bản ghi nào được tìm thấy.');
                 }
                 $scope.productCategories = result.data.Items;
@@ -110,4 +110,4 @@
 
         $scope.getProductCagories();
     }
-})(angular.module('tedushop.product_categories'));
+})(angular.module('shyApp.product_categories'));

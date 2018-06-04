@@ -154,7 +154,7 @@
     <Compile Include="Repositories\SystemConfigRepository.cs" />
     <Compile Include="Repositories\TagRepository.cs" />
     <Compile Include="Repositories\VisitorStatisticRepository.cs" />
-    <Compile Include="TeduShopDbContext.cs" />
+    <Compile Include="ShyDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

@@ -15,4 +15,4 @@
             }
         };
     });
-})(angular.module('tedushop.common'));
+})(angular.module('shyApp.common'));

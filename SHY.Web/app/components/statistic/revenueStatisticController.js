@@ -41,4 +41,4 @@
         getStatistic();
     }
 
-})(angular.module('tedushop.statistics'));
+})(angular.module('shyApp.statistics'));

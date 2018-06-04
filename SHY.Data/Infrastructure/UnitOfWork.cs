@@ -9,14 +9,14 @@ namespace SHY.Data.Infrastructure
     public class UnitOfWork : IUnitOfWork
     {
         private readonly IDbFactory dbFactory;
-        private TeduShopDbContext dbContext;
+        private ShyDbContext dbContext;
 
         public UnitOfWork(IDbFactory dbFactory)
         {
             this.dbFactory = dbFactory;
         }
 
-        public TeduShopDbContext DbContext
+        public ShyDbContext DbContext
         {
             get { return dbContext ?? (dbContext = dbFactory.Init()); }
         }

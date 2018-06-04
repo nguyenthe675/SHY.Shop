@@ -12,4 +12,4 @@
         $scope.sideBar = "/app/shared/views/sideBar.html";
         //authenticationService.validateRequest();
     }
-})(angular.module('tedushop'));
+})(angular.module('shyApp'));

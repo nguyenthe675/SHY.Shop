@@ -4,6 +4,6 @@ namespace SHY.Data.Infrastructure
 {
     public interface IDbFactory : IDisposable
     {
-        TeduShopDbContext Init();
+        ShyDbContext Init();
     }
 }

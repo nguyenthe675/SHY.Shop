@@ -11,7 +11,7 @@ namespace SHY.Data.Infrastructure
     public abstract class RepositoryBase<T> : IRepository<T> where T : class
     {
         #region Properties
-        private TeduShopDbContext dataContext;
+        private ShyDbContext dataContext;
         private readonly IDbSet<T> dbSet;
 
         protected IDbFactory DbFactory
@@ -20,7 +20,7 @@ namespace SHY.Data.Infrastructure
             private set;
         }
 
-        protected TeduShopDbContext DbContext
+        protected ShyDbContext DbContext
         {
             get { return dataContext ?? (dataContext = DbFactory.Init()); }
         }
