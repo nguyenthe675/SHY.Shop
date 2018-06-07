@@ -74,7 +74,7 @@
                 Email = "nguyenthe675@gmail.com",
                 EmailConfirmed = true,
                 BirthDay = DateTime.Now,
-                FullName = "ThienHoang Solution"
+                FullName = "Administrator"
 
             };
             if (manager.Users.Count(x => x.UserName == "Administrator") == 0)
@@ -121,10 +121,10 @@
             {
                 List<ProductCategory> listProductCategory = new List<ProductCategory>()
             {
-                new ProductCategory() { Name="Điện lạnh",Alias="dien-lanh",Status=true },
-                 new ProductCategory() { Name="Viễn thông",Alias="vien-thong",Status=true },
-                  new ProductCategory() { Name="Đồ gia dụng",Alias="do-gia-dung",Status=true },
-                   new ProductCategory() { Name="Mỹ phẩm",Alias="my-pham",Status=true }
+                new ProductCategory() { Name="Giường",Alias="giuong",Status=true },
+                 new ProductCategory() { Name="Tủ gỗ",Alias="tu-go",Status=true },
+                  new ProductCategory() { Name="Kệ gỗ",Alias="ke-go",Status=true },
+                   new ProductCategory() { Name="Bàn phấn",Alias="ban-phan",Status=true }
             };
                 context.ProductCategories.AddRange(listProductCategory);
                 context.SaveChanges();
@@ -220,13 +220,13 @@
                 {
                     var contactDetail = new SHY.Model.Models.ContactDetail()
                     {
-                        Name = "Shop thời trang Shy Store",
-                        Address = "164 Khuất Duy Tiến, Thanh Xuân, HN.",
+                        Name = "Đồ gỗ nội thất Thu Thảo",
+                        Address = "631/1 Lê Đức Thọ, Phường 16, Quận Gò Vấp, TP HCM.",
                         Email = "nguyenthe675@gmail.com",
                         Lat = 21.0633645,
                         Lng= 105.8053274,
-                        Phone = "0904652627",
-                        Website = "",
+                        Phone = "0166.3606.351 - 0988.233.029",
+                        Website = "dogothuthao.com",
                         Other = "",
                         Status = true
 

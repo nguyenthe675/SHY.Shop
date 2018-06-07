@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<SHY.Web.Models.ProductCategoryViewModel>
 <div class="sub-cate">
     <div class="top-nav rsidebar span_1_of_left">
-        <h3 class="cate">Danh mục sản phẩm</h3>
+        <h3 class="cate"><i class="fa fa-list"></i> Danh mục sản phẩm</h3>
         <ul class="menu">
             @foreach (var category in Model.Where(x => x.ParentID == null))
             {

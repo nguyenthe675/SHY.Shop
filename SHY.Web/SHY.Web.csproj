@@ -4977,6 +4977,8 @@
     <Content Include="Assets\client\images\img-sprite.png" />
     <Content Include="Assets\client\images\label_new.png" />
     <Content Include="Assets\client\images\logo.png" />
+    <Content Include="Assets\client\images\logo01.png" />
+    <Content Include="Assets\client\images\logo_new.png" />
     <Content Include="Assets\client\images\pi.jpg" />
     <Content Include="Assets\client\images\pi1.jpg" />
     <Content Include="Assets\client\images\pi2.jpg" />
@@ -5617,7 +5619,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55429</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:8080/</IISUrl>
+          <IISUrl>http://localhost:8888/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
