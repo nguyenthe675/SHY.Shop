@@ -39,7 +39,7 @@
                 context.SystemConfigs.Add(new SystemConfig()
                 {
                     Code = "HomeTitle",
-                    ValueString = "Của hàng thời trang Shy Store",
+                    ValueString = "Đồ gỗ nội thất Thu Thảo",
 
                 });
             }
@@ -48,7 +48,7 @@
                 context.SystemConfigs.Add(new SystemConfig()
                 {
                     Code = "HomeMetaKeyword",
-                    ValueString = "Của hàng thời trang Shy Store",
+                    ValueString = "Đồ gỗ nội thất Thu Thảo",
 
                 });
             }
@@ -57,7 +57,7 @@
                 context.SystemConfigs.Add(new SystemConfig()
                 {
                     Code = "HomeMetaDescription",
-                    ValueString = "Của hàng thời trang Shy Store",
+                    ValueString = "Đồ gỗ nội thất Thu Thảo",
 
                 });
             }
